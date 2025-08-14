@@ -3,65 +3,94 @@
 ![.NET](https://img.shields.io/badge/.NET-6.0-blue)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
 
+> ✨ **Açıklama:**  
+> Bu proje, **C# .NET** kullanarak **LSB (Least Significant Bit)** yöntemiyle **.wav** formatındaki ses dosyalarına gizli metin, resim ve video gibi çeşitli dosya türlerini gömme işlemini gerçekleştirir.  
+> Ses dosyalarının orijinal kalitesi korunarak, mesajlar güvenli ve görünmez şekilde saklanır.
 
-## 📋 İçindekiler
+## 📑 İçindekiler  
+- [📜 Proje Hakkında](#proje-hakkinda)  
+- [⚡ Özellikler](#ozellikler)  
+- [🧩 Algoritma Özeti](#algoritma-özeti)  
+- [⚙️ Kurulum ve Kullanım](#kurulum-ve-kullanim)  
+- [📊 Örnek Çıktı](#ornek-cikti)  
+- [🛠 Teknolojiler](#teknolojiler)  
+- [🤝 Katkıda Bulunma](#katkida-bulunma)  
+- [📄 Lisans](#lisans)  
+- [📬 İletişim](#iletisim)
 
-- [Proje Hakkında](#proje-hakkında)
-- [Özellikler](#özellikler)
-- [Başlangıç](#başlangıç)
-- [Kullanım](#kullanım)
-- [Teknolojiler](#teknolojiler)
-- [Katkıda Bulunma](#katkıda-bulunma)
-- [Lisans](#lisans)
-- [İletişim](#iletişim)
+<a id="proje-hakkinda"></a>
+## 📜 Proje Hakkında  
+Audio Steganography, ses dosyalarının en düşük anlamlı bitlerini kullanarak gizli mesajların saklanmasını sağlayan bir tekniktir.  
 
+Bu proje:  
+- 🎙️ .wav formatındaki ses dosyalarını işler  
+- 🔍 Gizlenecek metin, resim ve video gibi farklı dosya türlerini binary formata dönüştürür  
+- 🌿 Fibonacci dizisi kullanarak mesajı ses verisine gömer  
+- 🔊 Orijinal ses kalitesini korur  
+- 📂 Gizlenmiş mesajı içeren yeni ses dosyası oluşturur
 
-## 🧐 Proje Hakkında
+<a id="ozellikler"></a>
+## ⚡ Özellikler  
+✅ LSB yöntemi ile güvenli mesaj gizleme  
+✅ Metin, resim ve video dosyalarını gömme desteği  
+✅ Fibonacci dizisi ile bitlerin yerleştirilmesi  
+✅ Türkçe karakter kontrolü  
+✅ Orijinal ve gizlenmiş ses dosyalarının yönetimi  
+✅ Kullanıcı dostu Windows Forms arayüzü
 
-Bu proje, **C#** ve **NAudio** kütüphanesi kullanarak WAV formatındaki ses dosyalarına gizli mesaj gömme (steganografi) işlemi yapar. Fibonacci dizisi tabanlı LSB yöntemiyle ses verilerinin belirli bitlerine mesaj gizlenir ve yeni bir ses dosyası oluşturulur.
+<a id="algoritma-özeti"></a>
+## 🧩 Algoritma Özeti  
+1. Ses dosyası byte dizisine dönüştürülür ve binary formata çevrilir.  
+2. Gizlenecek dosya türüne göre (metin, resim, video) içerik binary hale getirilir.  
+3. Fibonacci dizisi kullanılarak, mesaj bitleri ses dosyasının belirli bitlerine gömülür.  
+4. Değiştirilen binary veriler tekrar byte dizisine çevrilir.  
+5. Yeni .wav dosyası oluşturulur ve gizlenmiş mesaj oynatıcıda dinlenebilir.  
+6. Gizlenen mesaj, ses dosyasından okunarak doğrulanabilir.
 
+<a id="kurulum-ve-kullanim"></a>
+## ⚙️ Kurulum ve Kullanım  
+1. 📥 Projeyi klonlayın:  
+   ```bash
+   git clone https://github.com/leventDemirkaya/audio-steganography.git
+   cd audio-steganography
+2. 💻 Projeyi Visual Studio veya dotnet CLI ile açın ve çalıştırın.
+3. 🎵 Program arayüzünden .wav dosyası seçin, gizlenecek metin, resim veya video dosyasını seçin ve mesajı gömün.
+4. 🔊 Oluşan yeni ses dosyasını dinleyerek veya mesajı çıkararak doğrulayabilirsiniz.
 
-## 🚀 Özellikler
+<a id="ornek-cikti"></a>
+## 📊 Örnek Çıktı
+### 🎙️ Seçilen Ses Dosyası
+example.wav
 
-- WAV dosyalarını okuma ve binary formata çevirme
-- Fibonacci dizisi tabanlı LSB gizleme algoritması
-- Gizli mesajı binary olarak ses dosyasına gömme
-- Yeni WAV dosyası oluşturma ve oynatma
-- Türkçe karakter kontrolü (Türkçe karakterler desteklenmemektedir)
+### 📝 Gizlenecek Mesaj
+Merhaba, bu gizli bir mesajdır.
 
+### 🔢 Binary Mesaj Parçaları
+01001101 01100101 01110010 01101000 01100001 01100010 01100001 ...
 
-## 🎯 Başlangıç
+### 🎧 Oluşan Gizlenmiş Ses Dosyası
+gizlenen1.wav
 
-### Gereksinimler
+### 📬 Çıkarılan Mesaj
+Merhaba, bu gizli bir mesajdır.
 
-- [.NET Framework](https://dotnet.microsoft.com/en-us/download/dotnet-framework) (Windows Forms uygulaması için)
-- [NAudio](https://github.com/naudio/NAudio) kütüphanesi (NuGet üzerinden eklenmeli)
+<a id="teknolojiler"></a>
+## 🛠 Teknolojiler
+- 💻 C#
+- 🖥 .NET Framework / .NET 6.0
+- 🎨 Windows Forms
+- 🎵 NAudio kütüphanesi
 
-### Kurulum
+<a id="katkida-bulunma"></a>
+## 🤝 Katkıda Bulunma
+💡 Katkılarınız çok değerlidir!
+- 🐛 Hata bildirmek için Issues sekmesini kullanabilirsiniz.
+- 🚀 Geliştirme önerileri için Pull Request açabilirsiniz.
 
-```bash
-git clone https://github.com/leventDemirkaya/audioSteganography.git
-cd audioSteganography
-Visual Studio ile projeyi açıp, NuGet Paket Yöneticisi'nden NAudio paketini yükleyin.
+<a id="lisans"></a>  
+## 📄 Lisans
+📝 Bu proje MIT Lisansı ile korunmaktadır. Detaylar için LICENSE dosyasına bakabilirsiniz.
 
- 🎮 Kullanım
-Programı çalıştırın.
-Ses Dosyası Ekle butonuna tıklayarak WAV formatında ses dosyaları seçin.
-Listeden bir ses dosyası seçin, ses otomatik olarak oynatılacaktır.
-Gizlemek istediğiniz mesajı metin kutusuna yazın (Türkçe karakter kullanmayınız).
-Mesajı Gizle butonuna tıklayın.
-Program, mesajı ses dosyasına gizleyip yeni bir WAV dosyası oluşturacak ve oynatacaktır.
-
- 📦 Teknolojiler
-C#
-Windows Forms
-NAudio kütüphanesi
-
- 🤝 Katkıda Bulunma
-Katkılarınızı memnuniyetle karşılarız! Lütfen bir sorun açın veya geliştirme önerilerinizi içeren pull request gönderin.
-
- 📄 Lisans
-Bu proje MIT Lisansı ile lisanslanmıştır. Detaylar için LICENSE dosyasına bakınız.
-
- 📫 İletişim
-Levent Demirkaya - GitHub - leventdemirkaya@outlook.com
+<a id="iletisim"></a>  
+## 📬 İletişim
+📧 leventdemirkaya@outlook.com
