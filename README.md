@@ -44,7 +44,7 @@ git clone https://github.com/leventDemirkaya/audioSteganography.git
 cd audioSteganography
 Visual Studio ile projeyi açıp, NuGet Paket Yöneticisi'nden NAudio paketini yükleyin.
 
-🎮 Kullanım
+## 🎮 Kullanım
 Programı çalıştırın.
 Ses Dosyası Ekle butonuna tıklayarak WAV formatında ses dosyaları seçin.
 Listeden bir ses dosyası seçin, ses otomatik olarak oynatılacaktır.
@@ -52,16 +52,16 @@ Gizlemek istediğiniz mesajı metin kutusuna yazın (Türkçe karakter kullanmay
 Mesajı Gizle butonuna tıklayın.
 Program, mesajı ses dosyasına gizleyip yeni bir WAV dosyası oluşturacak ve oynatacaktır.
 
-📦 Teknolojiler
+## 📦 Teknolojiler
 C#
 Windows Forms
 NAudio kütüphanesi
 
-🤝 Katkıda Bulunma
+## 🤝 Katkıda Bulunma
 Katkılarınızı memnuniyetle karşılarız! Lütfen bir sorun açın veya geliştirme önerilerinizi içeren pull request gönderin.
 
-📄 Lisans
+## 📄 Lisans
 Bu proje MIT Lisansı ile lisanslanmıştır. Detaylar için LICENSE dosyasına bakınız.
 
-📫 İletişim
+## 📫 İletişim
 Levent Demirkaya - GitHub - leventdemirkaya@outlook.com
